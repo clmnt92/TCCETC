@@ -13,6 +13,11 @@ namespace WebApplication2
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
+        protected const string message = "bonjour";
+
+        protected string getMessage() { 
+            return message;
+        }
 
         protected void Page_Init(object sender, EventArgs e)
         {

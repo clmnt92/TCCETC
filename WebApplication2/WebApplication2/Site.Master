@@ -37,6 +37,8 @@
         </Scripts>
     </asp:ScriptManager>
     <header>
+        <% getMessage(); %>
+       
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
@@ -72,6 +74,7 @@
         </div>
     </header>
     <div id="body">
+        bonjour
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
         <section class="content-wrapper main-content clear-fix">
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
@@ -80,7 +83,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p> v0.01 (<%=ConfigurationManager.AppSettings["master"] %>)</p>
             </div>
         </div>
     </footer>
