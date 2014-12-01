@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication2.Account
+namespace TCCETC.Account
 {
     public partial class Login : Page
     {

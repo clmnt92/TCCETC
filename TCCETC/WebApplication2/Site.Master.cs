@@ -6,18 +6,34 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication2
+namespace TCCETC
 {
     public partial class SiteMaster : MasterPage
     {
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
-        protected const string message = "bonjour";
+        public  string message;
+        protected string _message;
+        protected TimeSpan now = DateTime.Now.TimeOfDay;
+        protected TimeSpan hourOfChange = TimeSpan.FromHours(18);
+
 
         protected string getMessage() { 
             return message;
         }
+
+        protected TimeSpan getNow()
+        {
+            return now;
+        }
+
+        protected TimeSpan getHourOfChange()
+        {
+            return hourOfChange;
+        }
+
+
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -73,6 +89,14 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (TimeSpan.Compare(now, hourOfChange) >= 0)
+            {
+                 message = "Bonsoir";
+            }
+            else
+            {
+                 message = "Bonjour";
+            }
         }
     }
 }

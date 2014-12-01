@@ -5,12 +5,15 @@ using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
-using WebApplication2;
+using System.IO;
+using TCCETC;
 
-namespace WebApplication2
+namespace TCCETC
 {
     public class Global : HttpApplication
     {
+        public static string _version = "v .0.2";
+
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
