@@ -209,6 +209,7 @@
     <Content Include="packages.config" />
     <Content Include="Courts.aspx" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Profil.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -334,6 +335,13 @@
     </Compile>
     <Compile Include="Members.aspx.designer.cs">
       <DependentUpon>Members.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profil.aspx.cs">
+      <DependentUpon>Profil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profil.aspx.designer.cs">
+      <DependentUpon>Profil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
